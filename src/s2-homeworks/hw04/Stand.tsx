@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import s from './Stand.module.css'
 import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
@@ -9,7 +9,7 @@ const Stand = () => {
     const [error, setError] = useState<string>('')
 
     const [stateForAllCheckboxes, setChecked] = useState<boolean>(false)
-
+    //const onChangeHandler = (e:ChangeEvent<HTMLInputElement> ) => setChecked(e.currentTarget.checked)
     return (
         <div id={'hw4-stand'} className={s.stand}>
             <div className={s.inputs}>
@@ -18,7 +18,10 @@ const Stand = () => {
                     <SuperInputText
                         id={'hw4-super-input-like-old'}
                         value={stateForAllInputs}
-                        onChange={(e) => setValue(e.currentTarget.value)}
+                        onChange={(e) => {
+                            error && setError('')
+                            setValue(e.currentTarget.value)
+                        }}
                     />
                 </div>
                 {/*инпут с ошибкой:*/}
@@ -27,12 +30,15 @@ const Stand = () => {
                         id={'hw4-super-input-with-error'}
                         value={stateForAllInputs}
                         onChangeText={setValue}
+                        spanClassName={'.big'}
+                        //setError={setError}
+                        className={'+'}
                         error={error}
                         onEnter={() => {
                             setError(
                                 stateForAllInputs.trim()
                                     ? ''
-                                    : 'Error'
+                                    : 'Text is required'
                             )
                             setValue('')
                         }}
@@ -43,14 +49,17 @@ const Stand = () => {
             <div className={s.buttons}>
                 {/*обычная кнопка:*/}
                 <div>
-                    <SuperButton id={'hw4-super-button-default'}>
-                        default
+                    <SuperButton
+                        id={'hw4-super-button-default'}>
+                        Default
                     </SuperButton>
                 </div>
                 {/*красная кнопка:*/}
                 <div>
-                    <SuperButton id={'hw4-super-button-red'} xType={'red'}>
-                        red
+                    <SuperButton
+                        id={'hw4-super-button-red'}
+                        xType={'red'}>
+                        Danger
                     </SuperButton>
                 </div>
                 {/*задизэйбленная кнопка:*/}
@@ -60,7 +69,7 @@ const Stand = () => {
                         xType={'red'}
                         disabled
                     >
-                        disabled
+                        Disabled
                     </SuperButton>
                 </div>
                 {/*задизэйбленная кнопка:*/}
@@ -69,7 +78,7 @@ const Stand = () => {
                         id={'hw4-super-button-secondary'}
                         xType={'secondary'}
                     >
-                        secondary
+                        Secondary
                     </SuperButton>
                 </div>
             </div>
@@ -81,6 +90,7 @@ const Stand = () => {
                         id={'hw4-super-checkbox-with-text'}
                         checked={stateForAllCheckboxes}
                         onChangeChecked={setChecked}
+                        className={'s.red'}
                     >
                         some text
                     </SuperCheckbox>
@@ -91,6 +101,7 @@ const Stand = () => {
                         id={'hw4-super-checkbox-like-old'}
                         checked={stateForAllCheckboxes}
                         onChange={(e) => setChecked(e.currentTarget.checked)}
+                        //onChange={onChangeHandler}
                     />
                 </div>
             </div>

@@ -19,6 +19,7 @@ type SuperInputTextPropsType = Omit<DefaultInputPropsType, 'type'> & {
     onEnter?: () => void
     error?: ReactNode
     spanClassName?: string
+    //setError?: (error: string) => void
 }
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
@@ -31,13 +32,13 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         className,
         spanClassName,
         id,
-
+        //setError,
         ...restProps // все остальные пропсы попадут в объект restProps
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         onChange?.(e) // если есть пропс onChange, то передать ему е (поскольку onChange не обязателен)
-
+        //error && setError?.('')
         onChangeText?.(e.currentTarget.value)
     }
     const onKeyPressCallback = (e: KeyboardEvent<HTMLInputElement>) => {
@@ -50,12 +51,23 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
 
     const finalSpanClassName = s.error
         + (spanClassName ? ' ' + spanClassName : '')
-    const finalInputClassName = s.input
-        + (error ? ' ' + s.errorInput : ' ' + s.superInput)
+
+    //console.log(spanClassName)
+
+    const finalInputClassName = s.input +
+        (error ? ' ' + s.errorInput : ' ' + s.superInput)
         + (className ? ' ' + s.className : '') // задача на смешивание классов
+
+    //console.log(className)
 
     return (
         <div className={s.inputWrapper}>
+            <span
+                id={id ? id + '-span' : undefined}
+                className={finalSpanClassName}
+            >
+                {error}
+            </span>
             <input
                 id={id}
                 type={'text'}
@@ -64,12 +76,6 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 className={finalInputClassName}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
-            <span
-                id={id ? id + '-span' : undefined}
-                className={finalSpanClassName}
-            >
-                {error}
-            </span>
         </div>
     )
 }
