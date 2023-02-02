@@ -30,9 +30,9 @@ const Stand = () => {
                         id={'hw4-super-input-with-error'}
                         value={stateForAllInputs}
                         onChangeText={setValue}
-                        spanClassName={'.big'}
+                        //spanClassName={'big'}
                         //setError={setError}
-                        className={'+'}
+                        //className={'className'}
                         error={error}
                         onEnter={() => {
                             setError(
@@ -50,7 +50,8 @@ const Stand = () => {
                 {/*обычная кнопка:*/}
                 <div>
                     <SuperButton
-                        id={'hw4-super-button-default'}>
+                        id={'hw4-super-button-default'}
+                    >
                         Default
                     </SuperButton>
                 </div>

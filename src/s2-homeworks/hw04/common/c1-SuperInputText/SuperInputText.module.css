@@ -1,4 +1,5 @@
 .input:focus {
+
 }
 
 .input {
@@ -21,7 +22,7 @@
 }
 
 .className {
-
+ border-color: green;
 }
 
 .errorInput {
@@ -32,6 +33,9 @@
 
 }
 
+.big {
+    font-size: 40px;
+}
 
 .error {
     display: block;

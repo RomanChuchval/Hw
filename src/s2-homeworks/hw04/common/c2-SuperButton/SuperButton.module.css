@@ -90,3 +90,7 @@ background-color: #C9E5FF;
 
 .button:disabled {
 }
+
+.green {
+    color: green;
+}
