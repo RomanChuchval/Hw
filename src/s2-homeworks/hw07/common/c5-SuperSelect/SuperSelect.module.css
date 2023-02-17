@@ -1,9 +1,26 @@
 .select {
+    width: 165px;
+    height: 24px;
+    border: 1px solid #C2C2C2;
+    color: black;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    outline: none;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
 }
 
 .select:focus {
+
 }
 
 
 .option:hover {
+
 }
