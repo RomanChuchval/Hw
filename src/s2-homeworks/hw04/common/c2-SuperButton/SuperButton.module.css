@@ -15,7 +15,7 @@
     width: 132px;
     height: 30px;
     color: #002E5C;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -25,10 +25,9 @@
 }
 
 .secondary {
-    width: 176px;
+    width: 132px;
     height: 30px;
-    color: white;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -43,7 +42,7 @@
     width: 132px;
     height: 30px;
     color: white;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -55,7 +54,7 @@
     width: 132px;
     height: 30px;
     color: white;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
