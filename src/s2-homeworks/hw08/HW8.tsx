@@ -27,6 +27,8 @@ const initialPeople: UserType[] = [
     {_id: 5, name: 'Ирина', age: 55},
 ]
 
+
+
 const HW8 = () => {
     const [people, setPeople] = useState<UserType[]>(initialPeople)
     const [currentSort, setCurrentSort] = useState('')
@@ -89,7 +91,6 @@ const HW8 = () => {
                             <td className={s.ageCol}>Age</td>
                         </tr>
                         </thead>
-
                         <tbody>{finalPeople}</tbody>
                     </table>
                 </div>
