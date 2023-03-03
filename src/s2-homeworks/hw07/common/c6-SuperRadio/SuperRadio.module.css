@@ -8,27 +8,19 @@
 }
 
 .radio::before {
-    /*content: '';*/
-    /*display: inline-block;*/
-    /*position: absolute;*/
-    /*width: 18px;*/
-    /*height: 18px;*/
-    /*background-color: transparent;*/
-    /*border-radius: 50%;*/
-    /*border: 1px solid black;*/
-
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid black;
 }
-
-/*.checkmark {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*}*/
-
 
 .radio:checked::before {
     content: '';
-    /*display: inline-block;*/
+    display: inline-block;
     position: absolute;
     width: 18px;
     height: 18px;
@@ -53,4 +45,5 @@
     margin-left: 127px;
     display: flex;
     flex-direction: column;
+    
 }

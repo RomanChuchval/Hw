@@ -28,7 +28,6 @@ const initialPeople: UserType[] = [
 ]
 
 
-
 const HW8 = () => {
     const [people, setPeople] = useState<UserType[]>(initialPeople)
     const [currentSort, setCurrentSort] = useState('')
