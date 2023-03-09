@@ -1,3 +1,38 @@
+
 .loader {
-    /*свг и/или анимация*/
+    animation: spin 2s linear infinite;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background: conic-gradient(from 90deg at 50% 50%, rgba(255, 255, 255, 0) 20deg, #512DE4 360deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 0 0 25px;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    background-color: #512DE4FF;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: 44%;
+    right: 0;
+}
+
+.loader_center {
+    width: 60px;
+    height: 60px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
