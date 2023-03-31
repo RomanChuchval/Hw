@@ -12,7 +12,6 @@
 }
 
 .disabled {
-    width: 132px;
     height: 30px;
     color: #002E5C;
     font-family: 'Montserrat', sans-serif;
@@ -25,7 +24,6 @@
 }
 
 .secondary {
-    width: 132px;
     height: 30px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;

@@ -25,6 +25,7 @@ html {
     width: 171px;
     height: 36px;
     border: 1px solid black;
+    border-radius: 2px;
     background-color: var(--background);
     color: var(--color);
     border: var(--border); ;

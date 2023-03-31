@@ -19,9 +19,9 @@ export type ThemesTypes = {
 }
 
 const themes: Array<ThemesTypes> = [
-    {id: 1, value: 'Light'},
-    {id: 2, value: 'Blue'},
-    {id: 3, value: 'Dark'},
+    {id: 1, value: 'light'},
+    {id: 2, value: 'blue'},
+    {id: 3, value: 'dark'},
 ]
 
 const HW12 = () => {
