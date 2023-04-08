@@ -20,7 +20,7 @@ const getTechs = (find: string) => {
             {params: {find}}
         )
         .catch((e) => {
-            alert(e.response?.data?.errorText || e.message)
+            // alert(e.response?.data?.errorText || e.message)
         })
 }
 
