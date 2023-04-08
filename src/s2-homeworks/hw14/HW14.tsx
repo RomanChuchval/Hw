@@ -77,12 +77,14 @@ const HW14 = () => {
                     onChangeText={onChangeText}
                     onDebouncedChange={sendQuery}
                 />
-
-                <div id={'hw14-loading'} className={s.loading}>
-                    {isLoading ? '...ищем' : <br/>}
+                <div className={s.list_wrapper}>
+                    <div>
+                        {mappedTechs}
+                    </div>
+                    <div id={'hw14-loading'} className={s.loading}>
+                        {isLoading ? '...ищем' : <br/>}
+                    </div>
                 </div>
-
-                {mappedTechs}
             </div>
         </div>
     )

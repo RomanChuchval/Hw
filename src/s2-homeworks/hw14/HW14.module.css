@@ -1,7 +1,23 @@
 .tech {
-
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .loading {
+    color: #4D4D4D;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+}
 
+.list_wrapper {
+    padding-top: 11px;
+    display: flex;
+    width: 370px;
+    justify-content: space-between;
 }
