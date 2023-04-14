@@ -31,10 +31,13 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             <Pagination
                 id={id + '-pagination'}
                 sx={{
-                    // стили для Pagination // пишет студент
+                    marginRight: '20px'
                 }}
                 page={page}
                 count={lastPage}
+                shape={'rounded'}
+                color={'primary'}
+                size={'small'}
                 onChange={onChangeCallback}
                 hideNextButton
                 hidePrevButton

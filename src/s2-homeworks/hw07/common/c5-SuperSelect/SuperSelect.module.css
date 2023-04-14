@@ -1,5 +1,5 @@
 .select {
-    width: 165px;
+    width: max-content;
     height: 24px;
     border: 1px solid #C2C2C2;
     color: black;
