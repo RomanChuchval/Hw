@@ -8,10 +8,15 @@
 
 .techHeader {
     width: 50vw;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
 }
 
 .developerHeader {
-
+    display: flex;
+    border: 1px solid;
+    align-items: center;
 }
 
 .row {

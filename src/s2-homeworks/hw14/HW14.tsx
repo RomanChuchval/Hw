@@ -58,6 +58,7 @@ const HW14 = () => {
         const params = Object.fromEntries(searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
+        // setSearchParams({})
     }, [])
 
     const mappedTechs = techs.map(t => (
