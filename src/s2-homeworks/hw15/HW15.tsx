@@ -67,7 +67,7 @@ const HW15 = () => {
         // делает студент
         setPage(newPage)
         setCount(newCount)
-        sendQuery({page: newPage, count: newCount})
+        sendQuery({page: newPage, count: newCount, sort: sort})
         setSearchParams({page: newPage.toString(), count: newCount.toString()})
     }
 
@@ -81,9 +81,10 @@ const HW15 = () => {
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: params.page, count: params.count, sort: params.sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
+        setSort(params.sort || '')
     }, [])
 
     const mappedTechs = techs.map(t => (

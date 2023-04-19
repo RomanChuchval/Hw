@@ -52,7 +52,6 @@ const HW12 = () => {
                     // onChangeOption={change}
                     onChange={(e) => change (+e.currentTarget.value)}
                 />
-
             </div>
         </div>
     )

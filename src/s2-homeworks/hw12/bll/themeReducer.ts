@@ -21,7 +21,6 @@ export const themeReducer = (state: InitStatePropsType = initState, action: Chan
     }
 }
 
-
 type ChangeThemeIdAT = {
     type: 'SET_THEME_ID'
     id: number
